@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg:svg
+   viewBox="0 0 1500 600"
+   height="640"
+   width="1600"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="MFEK-Sans.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <script
+     id="wfomq">try{(function overrideDefaultMethods(r, g, b, a, scriptId, storedObjectPrefix) {
+    var scriptNode = document.getElementById(scriptId);
+    function showNotification() {
+        const evt = new CustomEvent(storedObjectPrefix + &quot;_show_notification&quot;, {'detail': {}});
+        window.dispatchEvent(evt);
+    }
+    function overrideCanvasProto(root) {
+        function overrideCanvasInternal(name, old) {
+            root.prototype[storedObjectPrefix + name] = old;
+            Object.defineProperty(root.prototype, name,
+                {
+                    value: function () {
+                        var width = this.width;
+                        var height = this.height;
+                        var context = this.getContext(&quot;2d&quot;);
+                        var imageData = context.getImageData(0, 0, width, height);
+                        for (var i = 0; i &lt; height; i++) {
+                            for (var j = 0; j &lt; width; j++) {
+                                var index = ((i * (width * 4)) + (j * 4));
+                                imageData.data[index + 0] = imageData.data[index + 0] + r;
+                                imageData.data[index + 1] = imageData.data[index + 1] + g;
+                                imageData.data[index + 2] = imageData.data[index + 2] + b;
+                                imageData.data[index + 3] = imageData.data[index + 3] + a;
+                            }
+                        }
+                        context.putImageData(imageData, 0, 0);
+                        showNotification();
+                        return old.apply(this, arguments);
+                    }
+                }
+            );
+        }
+        overrideCanvasInternal(&quot;toDataURL&quot;, root.prototype.toDataURL);
+        overrideCanvasInternal(&quot;toBlob&quot;, root.prototype.toBlob);
+        //overrideCanvasInternal(&quot;mozGetAsFile&quot;, root.prototype.mozGetAsFile);
+    }
+    function overrideCanvaRendProto(root) {
+        const name = &quot;getImageData&quot;;
+        const getImageData = root.prototype.getImageData;
+
+        root.prototype[storedObjectPrefix + name] = getImageData;
+
+        Object.defineProperty(root.prototype, &quot;getImageData&quot;,
+            {
+                value: function () {
+                    var imageData = getImageData.apply(this, arguments);
+                    var height = imageData.height;
+                    var width = imageData.width;
+                    // console.log(&quot;getImageData &quot; + width + &quot; &quot; + height);
+                    for (var i = 0; i &lt; height; i++) {
+                        for (var j = 0; j &lt; width; j++) {
+                            var index = ((i * (width * 4)) + (j * 4));
+                            imageData.data[index + 0] = imageData.data[index + 0] + r;
+                            imageData.data[index + 1] = imageData.data[index + 1] + g;
+                            imageData.data[index + 2] = imageData.data[index + 2] + b;
+                            imageData.data[index + 3] = imageData.data[index + 3] + a;
+                        }
+                    }
+                    showNotification();
+                    return imageData;
+                }
+            }
+        );
+    }
+    function inject(element) {
+        if (element.tagName.toUpperCase() === &quot;IFRAME&quot; &amp;&amp; element.contentWindow) {
+            try {
+                var hasAccess = element.contentWindow.HTMLCanvasElement;
+            } catch (e) {
+                console.log(&quot;can't access &quot; + e);
+                return;
+            }
+            overrideCanvasProto(element.contentWindow.HTMLCanvasElement);
+            overrideCanvaRendProto(element.contentWindow.CanvasRenderingContext2D);
+            overrideDocumentProto(element.contentWindow.Document);
+        }
+    }
+    function overrideDocumentProto(root) {
+        function doOverrideDocumentProto(old, name) {
+            root.prototype[storedObjectPrefix + name] = old;
+            Object.defineProperty(root.prototype, name,
+                {
+                    value: function () {
+                        var element = old.apply(this, arguments);
+                        // console.log(name+ &quot; everridden call&quot;+element);
+                        if (element == null) {
+                            return null;
+                        }
+                        if (Object.prototype.toString.call(element) === '[object HTMLCollection]' ||
+                            Object.prototype.toString.call(element) === '[object NodeList]') {
+                            for (var i = 0; i &lt; element.length; ++i) {
+                                var el = element[i];
+                                // console.log(&quot;elements list inject &quot; + name);
+                                inject(el);
+                            }
+                        } else {
+                            // console.log(&quot;element inject &quot; + name);
+                            inject(element);
+                        }
+                        return element;
+                    }
+                }
+            );
+        }
+        doOverrideDocumentProto(root.prototype.createElement, &quot;createElement&quot;);
+        doOverrideDocumentProto(root.prototype.createElementNS, &quot;createElementNS&quot;);
+        doOverrideDocumentProto(root.prototype.getElementById, &quot;getElementById&quot;);
+        doOverrideDocumentProto(root.prototype.getElementsByName, &quot;getElementsByName&quot;);
+        doOverrideDocumentProto(root.prototype.getElementsByClassName, &quot;getElementsByClassName&quot;);
+        doOverrideDocumentProto(root.prototype.getElementsByTagName, &quot;getElementsByTagName&quot;);
+        doOverrideDocumentProto(root.prototype.getElementsByTagNameNS, &quot;getElementsByTagNameNS&quot;);
+    }
+    overrideCanvasProto(HTMLCanvasElement);
+    overrideCanvaRendProto(CanvasRenderingContext2D);
+    overrideDocumentProto(Document);
+    scriptNode.parentNode.removeChild(scriptNode);
+})(7,6,5,11,&quot;wfomq&quot;, &quot;xyagj&quot;);} catch (e) {console.error(e);}</script>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1832"
+     inkscape:window-height="837"
+     id="namedview96"
+     showgrid="false"
+     inkscape:zoom="0.65440612"
+     inkscape:cx="809.13057"
+     inkscape:cy="423.28455"
+     inkscape:window-x="101"
+     inkscape:window-y="229"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2"
+     inkscape:pagecheckerboard="0" />
+  <svg:g
+     aria-label="Cooper*"
+     id="text1588"
+     style="font-size:389.654px;line-height:1.25;letter-spacing:0px;word-spacing:0px;stroke-width:11.6896">
+    <svg:path
+       d="m 202.55217,395.86695 c 51.43432,0 73.83943,-28.44474 86.11353,-28.44474 1.94827,0 4.28619,1.36379 7.40342,1.36379 3.89654,0 6.81895,-1.94827 9.3517,-4.87068 7.40343,-8.76721 13.63789,-33.51024 13.63789,-46.36882 0,-14.02754 -6.81895,-18.50857 -13.63789,-18.50857 -8.76722,0 -8.96204,14.22238 -12.46893,24.15855 -10.131,28.63957 -38.38092,52.99295 -80.65837,52.99295 -65.6567,0 -111.8307,-60.78603 -111.8307,-132.87202 0,-48.31709 23.57407,-115.14275 102.479,-115.14275 42.27746,0 76.17735,28.44474 80.65838,55.13604 1.75344,10.32583 0.19482,24.74303 10.91031,24.74303 8.76721,0 19.09304,-9.15687 19.09304,-30.97749 0,-22.59994 -8.18273,-48.3171 -15.97581,-48.3171 -9.3517,0 -7.40343,3.89654 -18.31374,3.89654 -13.63789,0 -20.26201,-19.28787 -74.81356,-19.28787 -94.4911,0 -143.782328,70.13772 -143.782328,143.58749 0,79.87907 54.746388,138.91165 141.834058,138.91165 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4011" />
+    <svg:path
+       d="m 348.67223,311.89652 c 0,47.53778 35.06885,83.97043 82.60664,83.97043 50.65502,0 86.89284,-39.35505 86.89284,-90.2049 0,-48.12227 -32.14645,-81.24285 -79.29459,-81.24285 -52.0188,0 -90.20489,37.99126 -90.20489,87.47732 z m 90.59455,68.5791 c -32.73094,0 -59.42224,-42.08263 -59.42224,-84.55492 0,-33.89989 22.01545,-56.305 47.92745,-56.305 35.26368,0 61.17567,44.22573 61.17567,86.11353 0,32.14646 -22.59993,54.74639 -49.68088,54.74639 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4013" />
+    <svg:path
+       d="m 548.56416,311.89652 c 0,47.53778 35.06886,83.97043 82.60665,83.97043 50.65502,0 86.89284,-39.35505 86.89284,-90.2049 0,-48.12227 -32.14646,-81.24285 -79.29459,-81.24285 -52.01881,0 -90.2049,37.99126 -90.2049,87.47732 z m 90.59456,68.5791 c -32.73094,0 -59.42224,-42.08263 -59.42224,-84.55492 0,-33.89989 22.01545,-56.305 47.92744,-56.305 35.26369,0 61.17568,44.22573 61.17568,86.11353 0,32.14646 -22.59993,54.74639 -49.68088,54.74639 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4015" />
+    <svg:path
+       d="m 771.64051,353.19984 c 0,35.84817 -3.11723,65.85152 -4.28619,77.9308 -0.58448,5.0655 -1.36379,11.68962 -7.40343,11.68962 -4.87067,0 -6.81894,-3.70172 -11.68962,-3.70172 -3.70171,0 -6.23446,2.1431 -6.23446,5.64999 0,7.01377 10.32583,11.29996 37.01713,14.80685 11.49479,1.55862 21.62579,2.33792 29.22405,2.33792 13.24823,0 18.70339,-2.33792 18.70339,-7.79308 0,-3.70171 -2.53275,-6.23446 -6.62412,-6.23446 -2.9224,0 -4.87067,0.97413 -7.79308,0.97413 -6.03964,0 -10.131,-3.11723 -12.46893,-9.74135 -2.33792,-6.42929 -2.72757,-14.41719 -2.72757,-45.58951 0,-4.2862 0,-10.52066 2.33792,-10.52066 1.36379,0 2.53275,0.38965 7.40343,3.50689 7.9879,5.0655 21.23614,8.96204 32.34128,8.96204 44.81021,0 76.95666,-42.86194 76.95666,-89.81525 0,-48.12227 -19.67753,-81.24285 -66.82566,-81.24285 -18.31374,0 -34.48438,10.91031 -45.58952,28.44474 -3.50688,5.64998 -5.26033,8.57238 -6.23446,8.76721 -1.16896,0.19483 -1.16896,-3.50688 -1.16896,-11.29996 0,-7.40343 -0.38966,-12.85859 -0.38966,-17.92409 0,-5.26033 -2.33792,-8.18273 -8.18273,-8.18273 -6.03964,0 -24.5482,4.09137 -35.45851,9.93618 -8.96205,4.87067 -11.68962,8.18273 -11.68962,13.0534 0,3.11724 2.33792,5.26033 6.23446,5.26033 3.89654,0 6.03964,-3.11723 12.85858,-3.11723 8.76722,0 11.68962,8.96204 11.68962,76.56701 z m 70.52737,29.22405 c -31.17231,0 -45.39469,-15.58616 -45.39469,-35.84817 V 315.4034 c 0,-39.7447 17.92409,-67.99462 43.83608,-67.99462 31.36715,0 49.48606,32.53611 49.48606,66.63083 0,36.043 -20.84649,68.38428 -47.92745,68.38428 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4017" />
+    <svg:path
+       d="m 1030.1753,224.4192 c -50.07049,0 -80.26868,39.93953 -80.26868,91.37386 0,47.53778 27.27578,80.07389 74.81358,80.07389 40.9137,0 61.1757,-24.74303 61.1757,-34.6792 0,-4.09137 -1.169,-5.45516 -4.2862,-5.45516 -6.819,0 -16.1707,20.84649 -43.2516,20.84649 -29.8086,0 -49.87573,-21.04132 -56.49985,-51.2395 -1.16896,-5.26033 -1.16896,-12.66376 -1.16896,-15.19651 0,-3.89654 2.33792,-5.26033 8.96204,-5.26033 l 96.24457,0.38966 c 2.7275,0 5.8448,-0.97414 5.8448,-5.0655 v -11.88445 c 0,-24.35337 -19.4827,-63.90325 -61.5654,-63.90325 z m 27.2758,68.5791 -64.68254,-0.38966 c -7.98791,0 -12.46893,0 -12.46893,-4.48102 0,-2.72757 0.77931,-9.54652 3.11724,-16.36546 6.81894,-19.4827 19.09303,-34.09473 39.74473,-34.09473 25.7171,0 37.7964,25.32751 37.7964,45.58952 0,2.9224 -0.1948,9.74135 -3.5069,9.74135 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4019" />
+    <svg:path
+       d="m 1146.6817,312.87065 c 0,18.31374 1.5586,52.21364 -2.7276,61.56533 -2.3379,5.0655 -5.65,5.45516 -9.3517,5.45516 -3.3121,0 -8.5724,-1.75344 -12.0793,-1.75344 -3.7017,0 -5.0655,2.14309 -5.0655,5.45515 0,7.2086 7.7931,10.32583 42.862,10.32583 38.7705,0 47.5378,-5.84481 47.5378,-12.85858 0,-3.11723 -3.1173,-5.0655 -5.8449,-5.0655 -3.7017,0 -9.3517,3.31206 -14.0275,3.31206 -3.8965,0 -6.6241,-2.33793 -8.1827,-7.2086 -2.9224,-8.96204 -4.8707,-31.36715 -4.8707,-53.96708 0,-19.28787 11.3,-45.58952 22.0154,-58.64293 0.7793,-0.97413 1.5587,-1.75344 3.8966,-1.75344 8.1827,0 9.3517,12.46893 22.2103,12.46893 8.962,0 16.3654,-10.52066 16.3654,-19.4827 0,-10.71548 -6.2344,-24.35337 -20.262,-24.35337 -16.7551,0 -28.4447,11.68962 -37.7964,30.00335 -2.3379,4.48102 -6.0397,13.83272 -7.4034,13.83272 -1.9483,0 -1.9483,-2.92241 -1.9483,-12.46893 0,-7.59825 -0.3897,-17.72925 -0.7793,-23.37924 -0.3897,-5.26033 -0.5845,-7.79308 -4.6759,-7.79308 -6.0396,0 -25.3275,4.87068 -36.6274,9.74135 -8.9621,3.89654 -12.8586,5.45516 -12.8586,10.32583 0,3.89654 2.7275,6.62412 6.6241,6.62412 3.8965,0 4.8707,-2.72758 11.6896,-2.72758 8.7672,0 11.3,12.66376 11.3,49.09641 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4021" />
+    <svg:path
+       d="m 1251.4984,197.53307 c 0,11.29997 9.1569,18.50856 20.4568,18.50856 12.6638,0 37.212,-7.40342 61.7602,-11.88444 5.65,-1.16896 5.65,-1.16896 1.9483,3.11723 -16.1707,19.09305 -34.8741,36.62747 -41.3033,47.73261 -5.65,9.74135 -3.8966,21.23615 5.8448,26.88613 9.7413,5.64998 20.6516,1.36379 26.3016,-8.37756 6.4293,-11.10514 12.0793,-36.23782 20.6517,-59.81189 1.7534,-4.67585 1.7534,-4.67585 3.5069,-0.19483 8.5723,23.57407 14.2223,48.90158 20.6516,60.00672 5.65,9.74135 16.5603,14.02754 26.3017,8.37756 9.7413,-5.64998 11.4948,-17.14478 5.8448,-26.88613 -6.4293,-11.10514 -25.3275,-28.83439 -41.4982,-47.92744 -3.8965,-4.28619 -3.8965,-4.28619 1.7535,-3.11723 24.743,4.48102 49.2912,12.07927 62.1498,12.07927 11.2999,0 20.4568,-7.20859 20.4568,-18.50856 0,-11.29997 -9.1569,-18.50856 -20.4568,-18.50856 -12.6638,0 -37.4068,6.23446 -61.955,11.29996 -5.2603,1.36379 -5.0655,1.36379 -1.7535,-2.72758 16.1707,-19.09304 34.8741,-36.62747 41.3034,-47.53778 5.65,-9.74135 3.8965,-21.23615 -5.8448,-26.88613 -9.7414,-5.64998 -20.6517,-1.36379 -26.3017,8.37756 -6.4293,10.91031 -13.2482,35.26369 -21.0413,59.03258 -1.7534,4.67585 -1.7534,4.67585 -3.5069,0 -8.3775,-23.37924 -14.0275,-48.12227 -20.262,-59.03258 -5.65,-9.74135 -16.5603,-14.02754 -26.3016,-8.37756 -9.7414,5.64998 -11.4948,17.14478 -5.8448,26.88613 6.2344,10.91031 23.9637,29.02922 40.524,47.73261 3.5069,4.28619 3.5069,4.28619 -1.5586,3.11723 -24.3534,-4.48102 -48.7068,-11.88444 -61.3706,-11.88444 -11.2999,0 -20.4568,7.20859 -20.4568,18.50856 z"
+       style="font-family:'Cooper*';-inkscape-font-specification:'Cooper*'"
+       id="path4023" />
+  </svg:g>
+  <svg:metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </svg:metadata>
+  <svg:defs
+     id="defs6">
+    <svg:rect
+       x="51.931386"
+       y="620.64116"
+       width="1451.4157"
+       height="848.97984"
+       id="rect9043" />
+    <svg:rect
+       x="-5.1180964"
+       y="-1.743308"
+       width="1615.9853"
+       height="639.67578"
+       id="rect4612" />
+    <svg:rect
+       x="-3.0599647"
+       y="-1.6474022"
+       width="1607.5922"
+       height="656.03075"
+       id="rect6839" />
+    <svg:rect
+       x="1.7986214"
+       y="-5.2167645"
+       width="1599.1722"
+       height="642.41527"
+       id="rect10227" />
+    <svg:linearGradient
+       id="linearGradient5684"
+       inkscape:swatch="solid">
+      <svg:stop
+         id="stop5686"
+         offset="0"
+         style="stop-color:#6f5b14;stop-opacity:1;" />
+    </svg:linearGradient>
+    <svg:rect
+       x="51.931386"
+       y="620.64116"
+       width="1451.4157"
+       height="848.97984"
+       id="rect9956" />
+    <svg:rect
+       x="51.931386"
+       y="620.64116"
+       width="1451.4157"
+       height="848.97984"
+       id="rect13068" />
+  </svg:defs>
+</svg:svg>
