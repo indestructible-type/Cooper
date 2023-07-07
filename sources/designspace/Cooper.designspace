@@ -12,6 +12,21 @@
     </axis>
   </axes>
 
+  <rules>
+    <rule name="alt4">
+      <conditionset>
+        <condition maximum="900" minimum="600" name="Weight" />
+      </conditionset>
+      <sub name="four" with="four.alt" />
+    </rule>
+    <rule name="altJ">
+      <conditionset>
+        <condition maximum="900" minimum="600" name="Weight" />
+      </conditionset>
+      <sub name="J" with="J.alt" />
+    </rule>
+  </rules>
+
   <sources>
     <source filename="../ufo/regular.ufo" name="Cooper* Regular" familyname="Cooper*" stylename="Regular">
       <location>
