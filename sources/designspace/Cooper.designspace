@@ -12,18 +12,30 @@
     </axis>
   </axes>
 
-  <rules>
-    <rule name="alt4">
+  <rules processing="last">
+    <rule name="alt01">
       <conditionset>
         <condition maximum="900" minimum="600" name="Weight" />
       </conditionset>
       <sub name="four" with="four.alt" />
-    </rule>
-    <rule name="altJ">
-      <conditionset>
-        <condition maximum="900" minimum="600" name="Weight" />
-      </conditionset>
       <sub name="J" with="J.alt" />
+      <sub name="dollar" with="dollar.alt" />
+    </rule>
+    <rule name="alt02">
+      <conditionset>
+        <condition maximum="900" minimum="500" name="Weight" />
+      </conditionset>
+      <sub name="ampersand" with="ampersand.alt" />
+    </rule>
+    <rule name="alt03">
+      <conditionset>
+        <condition maximum="900" minimum="450" name="Weight" />
+      </conditionset>
+      <sub name="uniFB00" with="uniFB00.alt" />
+      <sub name="uniFB01" with="uniFB01.alt" />
+      <sub name="uniFB02" with="uniFB02.alt" />
+      <sub name="uniFB03" with="uniFB03.alt" />
+      <sub name="uniFB04" with="uniFB04.alt" />
     </rule>
   </rules>
 
