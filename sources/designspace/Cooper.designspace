@@ -20,6 +20,8 @@
       <sub name="four" with="four.alt" />
       <sub name="J" with="J.alt" />
       <sub name="dollar" with="dollar.alt" />
+      <sub name="cent" with="cent.alt" />
+      <sub name="paragraph" with="paragraph.alt" />
     </rule>
     <rule name="alt02">
       <conditionset>
@@ -29,7 +31,7 @@
     </rule>
     <rule name="alt03">
       <conditionset>
-        <condition maximum="900" minimum="450" name="Weight" />
+        <condition maximum="900" minimum="401" name="Weight" />
       </conditionset>
       <sub name="uniFB00" with="uniFB00.alt" />
       <sub name="uniFB01" with="uniFB01.alt" />
