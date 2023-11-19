@@ -2,7 +2,8 @@
 . misc/init.sh
 set -e
 
-fontName="Cooper*"
+fontName="Cooper"
+fontName_it="Cooper-Italic"
 axes="wght"
 
 ##########################################
@@ -36,6 +37,7 @@ rm -rf $VF_DIR
 mkdir -p $VF_DIR
 
 fontmake -m designspace/$fontName.designspace -o variable --output-path $VF_DIR/$fontName[$axes].ttf
+fontmake -m designspace/$fontName_it.designspace -o variable --output-path $VF_DIR/$fontName_it[$axes].ttf
 
 ##########################################
 
@@ -51,6 +53,7 @@ do
 done
 
 statmake --designspace designspace/$fontName.designspace $VF_DIR/$fontName[$axes].ttf
+statmake --designspace designspace/$fontName_it.designspace $VF_DIR/$fontName_it[$axes].ttf
 
 rm $VF_DIR/*gasp*
 

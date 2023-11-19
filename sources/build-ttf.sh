@@ -3,7 +3,8 @@
 set -e
 #source ../env/bin/activate
 
-fontName="Cooper*"
+fontName="Cooper"
+fontName_it="Cooper-Italic"
 
 ##########################################
 
@@ -36,6 +37,7 @@ rm -rf $TT_DIR
 mkdir -p $TT_DIR
 
 fontmake -m designspace/$fontName.designspace -i -o ttf --output-dir $TT_DIR
+fontmake -m designspace/$fontName_it.designspace -i -o ttf --output-dir $TT_DIR
 
 ##########################################
 

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<designspace format="4.1">
+
+  <axes>
+    <axis tag="wght" name="Weight" minimum="400" maximum="900" default="400">
+      <map input="400" output="400"/>
+      <map input="500" output="470"/>
+      <map input="600" output="550"/>
+      <map input="700" output="650"/>
+      <map input="800" output="766"/>
+      <map input="900" output="900"/>
+    </axis>
+  </axes>
+
+  <rules processing="last">
+    <rule name="alt01">
+      <conditionset>
+        <condition maximum="900" minimum="600" name="Weight" />
+      </conditionset>
+      <sub name="four" with="four.alt" />
+      <sub name="J" with="J.alt" />
+      <sub name="dollar" with="dollar.alt" />
+      <sub name="cent" with="cent.alt" />
+      <sub name="paragraph" with="paragraph.alt" />
+      <sub name="p" with="p.alt" />
+      <sub name="z" with="z.alt" />
+    </rule>
+    <rule name="alt02">
+      <conditionset>
+        <condition maximum="900" minimum="500" name="Weight" />
+      </conditionset>
+      <sub name="ampersand" with="ampersand.alt" />
+    </rule>
+    <rule name="alt03">
+      <conditionset>
+        <condition maximum="900" minimum="401" name="Weight" />
+      </conditionset>
+      <sub name="uniFB00" with="uniFB00.alt" />
+      <sub name="uniFB01" with="uniFB01.alt" />
+      <sub name="uniFB02" with="uniFB02.alt" />
+      <sub name="uniFB03" with="uniFB03.alt" />
+      <sub name="uniFB04" with="uniFB04.alt" />
+    </rule>
+  </rules>
+
+  <sources>
+    <source filename="../ufo/italic.ufo" name="Cooper* Italic" familyname="Cooper*" stylename="Italic">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="../ufo/blackitalic.ufo" name="Cooper* Black Italic" familyname="Cooper*" stylename="Black Italic">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+      </location>
+    </source>
+  </sources>
+
+  <instances>
+
+    <instance postscriptfontname="Cooper-Italic" familyname="Cooper*" name="Cooper* Italic" stylemapfamilyname="Cooper*" stylemapstylename="italic" stylename="Italic" filename="../instance_ufo/Cooper-Italic.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </instance>
+
+    <instance postscriptfontname="Cooper-MediumItalic" familyname="Cooper*" name="Cooper* Medium Italic" stylemapfamilyname="Cooper* Medium" stylemapstylename="italic" stylename="Medium" filename="../instance_ufo/Cooper-MediumItalic.ufo">
+      <location>
+        <dimension name="Weight" xvalue="470"/>
+      </location>
+    </instance>
+
+    <instance postscriptfontname="Cooper-SemiBoldItalic" familyname="Cooper*" name="Cooper* SemiBold Italic" stylemapfamilyname="Cooper* SemiBold" stylemapstylename="italic" stylename="SemiBold Italic" filename="../instance_ufo/Cooper-SemiBoldItalic.ufo">
+      <location>
+        <dimension name="Weight" xvalue="550"/>
+      </location>
+    </instance>
+
+    <instance postscriptfontname="Cooper-BoldItalic" familyname="Cooper*" name="Cooper* Bold Italic" stylemapfamilyname="Cooper*" stylemapstylename="bold italic" stylename="Bold Italic" filename="../instance_ufo/Cooper-BoldItalic.ufo">
+      <location>
+        <dimension name="Weight" xvalue="650"/>
+      </location>
+    </instance>
+
+    <instance postscriptfontname="Cooper-ExtraBoldItalic" familyname="Cooper*" name="Cooper* ExtraBold Italic" stylemapfamilyname="Cooper* ExtraBold" stylemapstylename="italic" stylename="ExtraBold Italic" filename="../instance_ufo/Cooper-ExtraBoldItalic.ufo">
+      <location>
+        <dimension name="Weight" xvalue="766"/>
+      </location>
+    </instance>
+
+    <instance postscriptfontname="Cooper-BlackItalic" familyname="Cooper*" name="Cooper* Black Italic" stylemapfamilyname="Cooper* Black" stylemapstylename="italic" stylename="Black Italic" filename="../instance_ufo/Cooper-BlackItalic.ufo">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+      </location>
+    </instance>
+  </instances>
+
+  <lib>
+    <dict>
+      <key>org.statmake.stylespace</key>
+      <dict>
+        <key>axes</key>
+        <array>
+
+          <dict>
+            <key>name</key>
+            <string>Weight</string>
+            <key>tag</key>
+            <string>wght</string>
+            <key>locations</key>
+            <array>
+
+              <dict>
+                <key>name</key>
+                <string>Regular</string>
+                <key>value</key>
+                <integer>400</integer>
+                <key>linked_value</key>
+                <integer>700</integer>
+                <key>flags</key>
+                <array>
+                  <string>ElidableAxisValueName</string>
+                </array>
+              </dict>
+
+              <dict>
+                <key>name</key>
+                <string>Medium</string>
+                <key>value</key>
+                <integer>500</integer>
+              </dict>
+
+              <dict>
+                <key>name</key>
+                <string>SemiBold</string>
+                <key>value</key>
+                <integer>600</integer>
+              </dict>
+
+              <dict>
+                <key>name</key>
+                <string>Bold</string>
+                <key>value</key>
+                <integer>700</integer>
+              </dict>
+
+              <dict>
+                <key>name</key>
+                <string>ExtraBold</string>
+                <key>value</key>
+                <integer>800</integer>
+              </dict>
+
+              <dict>
+                <key>name</key>
+                <string>Black</string>
+                <key>value</key>
+                <integer>900</integer>
+              </dict>
+
+            </array>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </lib>
+
+</designspace>
