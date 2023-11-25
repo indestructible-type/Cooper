@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1460762150
-ModificationTime: 1699144523
+ModificationTime: 1700822807
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -61,7 +61,7 @@ KernClass2: 12 12 "'kern' Horizontal Kerning lookup 0-1"
  24 k x uni0137 kgreenlandic
  21 T uni0162 Tcaron Tbar
  16 J IJ Jcircumflex
- 92 A Agrave Aacute Acircumflex Atilde Adieresis Aring AE Amacron Abreve Aogonek uni01CD uni0394
+ 84 A Agrave Aacute Acircumflex Atilde Adieresis Aring AE Amacron Abreve Aogonek uni01CD
  164 C G O Q Ograve Oacute Ocircumflex Otilde Odieresis Oslash Cacute Ccircumflex Cdotaccent Ccaron Gcircumflex Gbreve Gdotaccent uni0122 Omacron Obreve Ohungarumlaut OE
  101 V W Y Yacute Wcircumflex Ycircumflex Ydieresis uni021A Wgrave Wacute Wdieresis uni1E86 uni1E88 Ygrave
  1 X
@@ -72,7 +72,7 @@ KernClass2: 12 12 "'kern' Horizontal Kerning lookup 0-1"
  93 v w y yacute ydieresis wcircumflex ycircumflex wgrave wacute wdieresis uni1E87 uni1E89 ygrave
  21 T uni0162 Tcaron Tbar
  1 x
- 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 57 {} -114 {} -228 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} -114 {} 0 {} 0 {} -114 {} 0 {} -57 {} -114 {} 57 {} 0 {} 0 {} 57 {} 57 {} 0 {} 0 {} 0 {} -228 {} 0 {} 0 {} 0 {} -114 {} -171 {} -114 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -228 {} -57 {} 114 {} 0 {} -171 {} -228 {} -114 {} -171 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 114 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} -114 {} -114 {} 0 {} -114 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} -57 {} 0 {} -57 {} 0 {} 0 {} 0 {}
+ 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 57 {} -114 {} -228 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} -114 {} 0 {} 0 {} -114 {} 0 {} -57 {} -114 {} 57 {} 0 {} 0 {} 57 {} 57 {} 0 {} 0 {} 0 {} -228 {} 0 {} 0 {} 0 {} -114 {} -171 {} -114 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -228 {} -57 {} 114 {} 0 {} -171 {} -228 {} -75 {} -171 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 114 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -114 {} 0 {} 0 {} 0 {} -114 {} -114 {} 0 {} -114 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -57 {} -57 {} 0 {} -57 {} 0 {} 0 {} 0 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "indestructible type*" "Owen Earl" "" "https://indestructibletype.com/Home.html" "https://ewonrael.github.io" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "http://scripts.sil.org/OFL" "" "Cooper*"
 Encoding: UnicodeFull
 UnicodeInterp: none
@@ -80,7 +80,7 @@ NameList: AGL For New Fonts
 DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 64 16 4
+WinInfo: 48 16 4
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -99,7 +99,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 314572 157286 104857 545260 1048576 104857 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "ogonek"""  "cedilla"""  "bottom"""  "top"""  "Anchor-3"""  "Anchor-2"""  "Anchor-1"""  "Anchor-0"""  "Anchor-3"""  "Anchor-2"""  "Anchor-1"""  "Anchor-0"""  "Anchor-3"""  "Anchor-2"""  "Anchor-1"""  "Anchor-0""" 
-BeginChars: 1114135 488
+BeginChars: 1114137 490
 
 StartChar: zero
 Encoding: 48 48 0
@@ -1581,7 +1581,7 @@ StartChar: o
 Encoding: 111 111 34
 Width: 1026
 VWidth: 1920
-Flags: HMWO
+Flags: HMW
 AnchorPoint: "top" 519 880 basechar 0
 LayerCount: 2
 Fore
@@ -11388,6 +11388,28 @@ SplineSet
  416 832 l 1
 EndSplineSet
 Refer: 37 99 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: IJ.alt
+Encoding: 1114135 -1 488
+Width: 1675
+VWidth: 1920
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 9 73 N 1 0 0 1 0 0 2
+Refer: 478 -1 N 1 0 0 1 725 0 2
+EndChar
+
+StartChar: Jcircumflex.alt
+Encoding: 1114136 -1 489
+Width: 950
+VWidth: 1920
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 130 770 S 1 0 0 1 982.28 438 2
+Refer: 478 -1 N 1 0 0 1 0 0 3
 EndChar
 EndChars
 EndSplineFont

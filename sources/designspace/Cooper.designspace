@@ -22,6 +22,8 @@
       <sub name="dollar" with="dollar.alt" />
       <sub name="cent" with="cent.alt" />
       <sub name="paragraph" with="paragraph.alt" />
+      <sub name="IJ" with="IJ.alt" />
+      <sub name="Jcircumflex" with="Jcircumflex.alt" />
     </rule>
     <rule name="alt02">
       <conditionset>

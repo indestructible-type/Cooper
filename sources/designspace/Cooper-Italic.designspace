@@ -24,6 +24,11 @@
       <sub name="paragraph" with="paragraph.alt" />
       <sub name="p" with="p.alt" />
       <sub name="z" with="z.alt" />
+      <sub name="zacute" with="zacute.alt" />
+      <sub name="zdotaccent" with="zdotaccent.alt" />
+      <sub name="zcaron" with="zcaron.alt" />
+      <sub name="IJ" with="IJ.alt" />
+      <sub name="Jcircumflex" with="Jcircumflex.alt" />
     </rule>
     <rule name="alt02">
       <conditionset>

@@ -7,7 +7,7 @@ Cooper\* is designed and maintained by [Owen Earl](https://ewonrael.github.io/),
 
 About
 -----
-*Cooper Black* is perhaps one of the most ubiquitous fonts on the planet, but far less known is its regular weighted counterpart known simply as *Cooper*. First introduced to the world in the early 1920s, *Cooper Black* was always part of a family of fonts that included a non-black version, but over the past century, this family has been largely forgotten, leaving only *Cooper Black*.
+*Cooper Black* is perhaps one of the most ubiquitous fonts, but far less known is its regular weighted counterpart known simply as *Cooper*. First introduced to the world in the early 1920s, *Cooper Black* was always part of a family of fonts that included a non-black version, but over the past century, this family has been largely forgotten, leaving only *Cooper Black*.
 
 This is a shame because the regular weight version of *Cooper* is beautiful. It has an organic, Art Nouveau, feel to it. Straight lines bow inward like the trunk of a tree, acenders curve backwards and forwards like the delicate stems of flowers. There is hardly a straight line or a sharp corner to be found. It accomplishes this while still be legible at text sizes, making it suitable for laying out a book or other passages of text.
 
@@ -20,7 +20,7 @@ Pre-Release.
 
 Building
 --------
-Build scripts can be found inside the "sources" folder. To build, download and install the required software listed in the "requirements.txt" file before running the gen-sources.sh script and the build script that corresponds to your desired output (so if you want woff2 files run "build-woff2.sh")
+Build scripts can be found inside the "sources" folder. To build, download and install the required software listed in the "requirements.txt" file before running the build script that corresponds to your desired output (so if you want otf files run "build-otf.sh")
 
 Contributing
 ---------------
