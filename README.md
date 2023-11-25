@@ -5,6 +5,10 @@ Cooper\* is a meticulously researched, historically accurate revival of the *Coo
 
 Cooper\* is designed and maintained by [Owen Earl](https://ewonrael.github.io/), who is the creator of the font foundry [indestructible type*](http://indestructible-type.github.io).
 
+![MFEK Sans Animation](https://raw.githubusercontent.com/indestructible-type/Cooper/main/documentation/specimin.gif)
+*[\[View Type Specimen Book\]](https://raw.githubusercontent.com/indestructible-type/Cooper/main/documentation/Specimen.pdf)*
+
+
 About
 -----
 *Cooper Black* is perhaps one of the most ubiquitous fonts, but far less known is its regular weighted counterpart known simply as *Cooper*. First introduced to the world in the early 1920s, *Cooper Black* was always part of a family of fonts that included a non-black version, but over the past century, this family has been largely forgotten, leaving only *Cooper Black*.

@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1460762150
-ModificationTime: 1700832383
+ModificationTime: 1700926980
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -52,7 +52,7 @@ DEI: 91125
 KernClass2: 12 13 "'kern' Horizontal Kerning lookup 0-1"
  113 A L Agrave Aacute Acircumflex Atilde Adieresis Aring Amacron Abreve Aogonek Lacute uni013B Lslash uni01CD uni0394
  73 D O Q Eth Ograve Oacute Ocircumflex Otilde Odieresis Oslash Dcaron Dcroat
- 10 F P F.swsh
+ 17 F P F.swsh P.swsh
  11 K X uni0136
  107 V W Y Yacute Wcircumflex Ycircumflex Ydieresis Wgrave Wacute Wdieresis uni1E86 uni1E88 Ygrave T.swsh Y.swsh
  88 b o ograve oacute ocircumflex otilde odieresis oslash thorn omacron obreve ohungarumlaut
@@ -81,7 +81,7 @@ NameList: AGL For New Fonts
 DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 752 16 4
+WinInfo: 1114080 16 4
 BeginPrivate: 0
 EndPrivate
 Grid
