@@ -69,7 +69,7 @@
       </location>
     </instance>
 
-    <instance postscriptfontname="Cooper-MediumItalic" familyname="Cooper*" name="Cooper* Medium Italic" stylemapfamilyname="Cooper* Medium" stylemapstylename="italic" stylename="Medium" filename="../instance_ufo/Cooper-MediumItalic.ufo">
+    <instance postscriptfontname="Cooper-MediumItalic" familyname="Cooper*" name="Cooper* Medium Italic" stylemapfamilyname="Cooper* Medium" stylemapstylename="italic" stylename="Medium Italic" filename="../instance_ufo/Cooper-MediumItalic.ufo">
       <location>
         <dimension name="Weight" xvalue="470"/>
       </location>
