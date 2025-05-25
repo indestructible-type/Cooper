@@ -6,7 +6,7 @@ Cooper\* is a meticulously researched, historically accurate revival of the *Coo
 Cooper\* is designed and maintained by [Owen Earl](https://ewonrael.github.io/), who is the creator of the font foundry [indestructible type*](http://indestructible-type.github.io).
 
 ![MFEK Sans Animation](https://raw.githubusercontent.com/indestructible-type/Cooper/main/documentation/specimin.gif)
-*[\[View Type Specimen Book\]](https://raw.githubusercontent.com/indestructible-type/Cooper/main/documentation/Specimen.pdf)*
+*[\[View Type Specimen Book\]](https://raw.githubusercontent.com/indestructible-type/Cooper/main/documentation/Specimin.pdf)*
 
 
 About
