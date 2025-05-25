@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1460762150
-ModificationTime: 1700926980
+ModificationTime: 1748189896
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -81,7 +81,7 @@ NameList: AGL For New Fonts
 DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 1114080 16 4
+WinInfo: 176 16 4
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -5304,18 +5304,31 @@ VWidth: 1920
 Flags: HMW
 AnchorPoint: "top" -350.179 1024.73 mark 0
 LayerCount: 2
+Back
+SplineSet
+-680 1293 m 4
+ -680 1379 -612 1447 -526 1447 c 4
+ -440 1447 -372 1379 -372 1293 c 4
+ -372 1207 -440 1139 -526 1139 c 4
+ -612 1139 -680 1207 -680 1293 c 4
+-260 1293 m 4
+ -260 1379 -192 1447 -106 1447 c 4
+ -20 1447 48 1379 48 1293 c 4
+ 48 1207 -20 1139 -106 1139 c 4
+ -192 1139 -260 1207 -260 1293 c 4
+EndSplineSet
 Fore
 SplineSet
--680 1293 m 0
- -680 1379 -612 1447 -526 1447 c 0
- -440 1447 -372 1379 -372 1293 c 0
- -372 1207 -440 1139 -526 1139 c 0
- -612 1139 -680 1207 -680 1293 c 0
 -260 1293 m 0
  -260 1379 -192 1447 -106 1447 c 0
  -20 1447 48 1379 48 1293 c 0
  48 1207 -20 1139 -106 1139 c 0
  -192 1139 -260 1207 -260 1293 c 0
+-680 1293 m 4
+ -680 1379 -612 1447 -526 1447 c 4
+ -440 1447 -372 1379 -372 1293 c 4
+ -372 1207 -440 1139 -526 1139 c 4
+ -612 1139 -680 1207 -680 1293 c 4
 EndSplineSet
 EndChar
 

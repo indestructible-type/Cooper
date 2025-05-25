@@ -20,7 +20,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1460762150
-ModificationTime: 1700927282
+ModificationTime: 1731586784
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -80,7 +80,7 @@ NameList: AGL For New Fonts
 DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 1114080 16 4
+WinInfo: 48 16 4
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -3044,18 +3044,17 @@ Flags: HMW
 LayerCount: 2
 Fore
 SplineSet
-250 977 m 4
- 250 1002 273.513671875 1017.61132812 290 1036 c 4
- 316 1065 336 1106 336 1166 c 4
- 336 1196 326 1201 315 1201 c 4
- 306 1201 300 1197 272 1197 c 4
- 205 1197 134 1246 134 1323 c 4
- 134 1400 187 1453 264 1453 c 4
- 372 1453 422 1372 422 1230 c 4
- 422 1062 334 940 280 940 c 4
- 266 940 250 953 250 977 c 4
+250 977 m 0
+ 250 1002 273.513671875 1017.61132812 290 1036 c 0
+ 316 1065 336 1106 336 1166 c 0
+ 336 1196 326 1201 315 1201 c 0
+ 306 1201 300 1197 272 1197 c 0
+ 205 1197 134 1246 134 1323 c 0
+ 134 1400 187 1453 264 1453 c 0
+ 372 1453 422 1372 422 1230 c 0
+ 422 1062 334 940 280 940 c 0
+ 266 940 250 953 250 977 c 0
 EndSplineSet
-Validated: 1
 EndChar
 
 StartChar: quoteleft
@@ -3088,7 +3087,6 @@ Flags: HMW
 LayerCount: 2
 Fore
 Refer: 66 8217 S 1 0 0 1 0 -1215 2
-Validated: 1
 EndChar
 
 StartChar: quotedblleft
@@ -3112,7 +3110,6 @@ LayerCount: 2
 Fore
 Refer: 66 8217 S 1 0 0 1 311 0 2
 Refer: 66 8217 N 1 0 0 1 -69 0 2
-Validated: 1
 EndChar
 
 StartChar: hyphen
@@ -8176,7 +8173,7 @@ StartChar: Lcaron
 Encoding: 317 317 313
 Width: 1240
 VWidth: 1920
-Flags: MW
+Flags: HMW
 LayerCount: 2
 Fore
 Refer: 12 76 N 1 0 0 1 0 0 3
@@ -8187,7 +8184,7 @@ StartChar: lcaron
 Encoding: 318 318 314
 Width: 817
 VWidth: 2048
-Flags: MW
+Flags: HMW
 LayerCount: 2
 Fore
 Refer: 28 108 N 1 0 0 1 0.46875 0 2

@@ -20,7 +20,11 @@ Many of these delightful details are lost in the big bubbly boldness of the *Bla
 Changelog
 ---------
 <b>v0.01</b>
-Pre-Release.
+Pre-Release.<br>
+<b>v1.00</b>
+Initial Release.<br>
+<b>v1.01</b>
+Fixed italic umlaute<br>
 
 Building
 --------
